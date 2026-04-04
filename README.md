@@ -32,9 +32,9 @@ A suggested structure is:
 ```text
 GGSA/
 ├── scripts/
-│   ├── ggsa_cic_reproduction_clean.py
-│   ├── ggsa_toniot_reproduction_clean.py
-│   └── ggsa_unsw_reproduction_clean.py
+│   ├── ggsa_CIC.py
+│   ├── ggsa_TON_IOT.py
+│   └── ggsa_UNSW.py
 ├── data/
 ├── results/
 ├── README.md
@@ -47,7 +47,7 @@ You may adapt the folder organization as needed.
 ## Included Scripts
 
 ### 1. CIC-IDS2017
-**Script:** `ggsa_cic_reproduction_clean.py`
+**Script:** `ggsa_CIC.py`
 
 This script evaluates GGSA and baseline methods on the CIC-IDS2017 dataset under multiple telemetry degradation regimes. It includes:
 - MLP-based GGSA
@@ -60,7 +60,7 @@ Expected dataset file:
 - `CICIDS2017_day.csv`
 
 ### 2. ToN-IoT
-**Script:** `ggsa_toniot_reproduction_clean.py`
+**Script:** `ggsa_TON_IOT.py`
 
 This script evaluates GGSA on ToN-IoT using a multi-attack protocol. It automatically selects attack categories subject to support and segment-validity constraints, then reports:
 - per-attack, per-severity summaries
@@ -71,7 +71,7 @@ Expected dataset file:
 - `train_test_network.csv`
 
 ### 3. UNSW-NB15
-**Script:** `ggsa_unsw_reproduction_clean.py`
+**Script:** `ggsa_UNSW.py`
 
 This script provides a supplementary architectural extension on UNSW-NB15. It compares:
 - Standard
@@ -131,9 +131,9 @@ This repository does **not** redistribute the datasets.
 Example usage:
 
 ```bash
-python ggsa_cic_reproduction_clean.py
-python ggsa_toniot_reproduction_clean.py
-python ggsa_unsw_reproduction_clean.py
+python ggsa_CIC.py
+python ggsa_TON_IOT.py
+python ggsa_UNSW.py
 ```
 
 Before running a script, make sure the expected dataset file is present in the same directory or edit the filename variable at the top of the script.
