@@ -16,7 +16,7 @@ The scripts in this repository expect the following dataset files:
 
 - **Benchmark:** CIC-IDS2017
 - **File expected by script:** `CICIDS2017_day.csv`
-- **Script:** `scripts/ggsa_cic_reproduction_clean.py`
+- **Script:** `scripts/ggsa_CIC.py`
 - **Usage in this repository:** real-data evaluation under degraded telemetry
 - **Target setting:** binary intrusion detection stream
 - **Label handling:** `BENIGN -> 0`; all other labels -> `1`
@@ -31,7 +31,7 @@ The scripts in this repository expect the following dataset files:
 
 - **Benchmark:** ToN-IoT Network dataset
 - **File expected by script:** `train_test_network.csv`
-- **Script:** `scripts/ggsa_toniot_reproduction_clean.py`
+- **Script:** `scripts/ggsa_TON_IOT.py`
 - **Usage in this repository:** second real-data benchmark with a multi-attack protocol
 - **Attack handling:** attack categories are selected automatically from the `type` column unless manually specified in the script
 - **Typical evaluated attacks:** `ddos`, `dos`, `injection`, `password` (subject to the validity rules in the script)
@@ -46,7 +46,7 @@ The scripts in this repository expect the following dataset files:
 
 - **Benchmark:** UNSW-NB15
 - **File expected by script:** `UNSW_NB15.csv`
-- **Script:** `scripts/ggsa_unsw_reproduction_clean.py`
+- **Script:** `scripts/ggsa_UNSW.py`
 - **Usage in this repository:** supplementary architectural extension experiment
 - **Target setting:** binary target constructed from `attack_cat == "Exploits"` by default
 - **Preprocessing in script:**
@@ -64,18 +64,4 @@ Some public benchmark datasets exist in multiple processed versions or file orga
 
 Users are encouraged to verify that the downloaded dataset files match the expected structure before running the experiments.
 
-## Optional Integrity Information
 
-For stronger reproducibility, you may additionally record the following information for each dataset file after downloading it:
-
-- file size
-- number of rows / columns
-- SHA256 checksum
-
-A suggested template is:
-
-| Dataset | File | Rows | Columns | SHA256 |
-|---|---|---:|---:|---|
-| CIC-IDS2017 | `CICIDS2017_day.csv` |  |  |  |
-| ToN-IoT | `train_test_network.csv` |  |  |  |
-| UNSW-NB15 | `UNSW_NB15.csv` |  |  |  |
